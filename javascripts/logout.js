@@ -4,7 +4,7 @@ logoutElement.addEventListener("click", doLogout);
 function doLogout() {
   clearClientSession();
 
-  window.location.href = "/html/index.html";
+  window.location.href = "index.html";
 }
 
 function clearClientSession() {

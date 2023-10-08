@@ -1,5 +1,5 @@
 function doLogin() {
-    // let urlBase = "";
+    // let urlBase = "http://161.35.130.120/";
     let login = document.getElementById("loginName").value;
     let password = document.getElementById("loginPassword").value;
 
@@ -9,7 +9,8 @@ function doLogin() {
     let jsonPayload = JSON.stringify(tmp);
 
     // let url = urlBase + "/Login.php";
-    let url = "/FallKnightHack/api/login.php";
+    // let url = urlBase + "api/login.php";
+    let url = "/FallKnightHack/api/login.php"
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
@@ -34,7 +35,7 @@ function doLogin() {
 
         saveCookie();
 
-        window.location.href = "http://127.0.0.1:5500/html/home.html";
+        window.location.href = "home.html";
         }
     };
     xhr.send(jsonPayload);

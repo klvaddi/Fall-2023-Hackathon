@@ -1,6 +1,6 @@
 function doRegister() 
 {
-    
+    // let urlBase = "http://161.35.130.120/";
     let firstName = document.getElementById("registerFirstName").value;
     let lastName = document.getElementById("registerLastName").value;
     let login = document.getElementById("registerUsername").value;
@@ -11,7 +11,8 @@ function doRegister()
     let tmp = {first_name: firstName, last_name: lastName, email: "testing4@example.com", user_name: login, user_password: password};
     let jsonPayload = JSON.stringify(tmp);
     
-    let url = urlBase + '../api/register.php';
+    // let url = urlBase + 'api/register.php';
+    let url = "/FallKnightHack/api/register.php"
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
