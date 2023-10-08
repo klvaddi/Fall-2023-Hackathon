@@ -8,10 +8,10 @@ function doRegister()
 
     // document.getElementById("registerResult").innerHTML = "";
 
-    let tmp = {FirstName: firstName, LastName: lastName, login: login, password: password};
+    let tmp = {first_name: firstName, last_name: lastName, email: "testing4@example.com", user_name: login, user_password: password};
     let jsonPayload = JSON.stringify(tmp);
     
-    let url = urlBase + '/AddUser.php';
+    let url = urlBase + '../api/register.php';
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);

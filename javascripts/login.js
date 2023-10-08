@@ -34,7 +34,7 @@ function doLogin() {
 
         saveCookie();
 
-        window.location.href = "/FallKnightHack/html/home.html";
+        window.location.href = "http://127.0.0.1:5500/html/home.html";
         }
     };
     xhr.send(jsonPayload);
