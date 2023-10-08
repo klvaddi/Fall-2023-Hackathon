@@ -12,6 +12,11 @@
       crossorigin="anonymous"
     />
     <title>Register</title>
+    <link
+      rel="icon"
+      href="/resources/img/eagle-caduceus-01.jpg"
+      type="image/x-icon"
+    />
   </head>
 
   <body
@@ -21,7 +26,7 @@
     <!--Semantic form tag; represents login box-->
     <form
       id="loginForm"
-      class="text-center bg-secondary bg-opacity-25 p-5 d-flex flex-column justify-content-center align-items-center"
+      class="text-center bg-primary bg-opacity-25 p-5 d-flex flex-column justify-content-center align-items-center"
     >
       <h2 class="text-center" style="padding-bottom: 1rem">Register</h2>
 
@@ -79,12 +84,7 @@
             id="civilianRadio"
             value="civilian"
           />
-          <label
-            class="form-check-label custom-radio-label"
-            for="civilianRadio"
-          >
-            Civilian
-          </label>
+          <label class="form-check-label" for="civilianRadio"> Civilian </label>
         </div>
         <div class="form-check">
           <input
@@ -94,10 +94,7 @@
             id="paramedicRadio"
             value="paramedic"
           />
-          <label
-            class="form-check-label custom-radio-label"
-            for="paramedicRadio"
-          >
+          <label class="form-check-label" for="paramedicRadio">
             Paramedic
           </label>
         </div>
@@ -108,7 +105,7 @@
       <button
         onsubmit="return false"
         type="button"
-        class="btn btn-primary btn-lg rounded mb-4"
+        class="btn btn-primary btn-lg rounded mt-4"
         id="register"
         onclick="doRegister()"
       >
