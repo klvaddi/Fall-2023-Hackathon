@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <script type="text/javascript" src="js/login.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <title>Login</title>
+    </head>
+
+    <body class="bg-primary d-flex flex-column justify-content-center align-items-center align-content-center p-3" style="min-height: 100vh;">
+        <h1 class="mb-5 text-danger" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Emergency Eagle</h1>
+
+        <!--Semantic form tag; represents login box-->
+        <form id="loginForm" class="text-center bg-secondary bg-opacity-25 p-5 d-flex flex-column justify-content-center align-items-center">
+
+            <h2 class="text-center" style="padding-bottom: 1rem;">Login</h2>
+
+            <!--Username and password input boxes-->
+            <label class="h5" for="loginName">Username:</label>
+            <input class="rounded-pill p-2 mb-4" id="loginName" type="text" placeholder="Username" required>
+            <span id="userNotice" style="color: red;"></span>
+    
+            <label class="h5" for="loginPassword">Password:</label>
+            <input class="rounded-pill p-2 mb-4" id="loginPassword" type="password" placeholder="Password" required>
+            <span id="passNotice" style="color: red;"></span>
+
+            <!--Submit button-->
+            <span id="loginNotice" style="color: red;"></span>
+            <button onsubmit="return false" type="button" class="btn btn-primary btn-lg rounded mb-4" id="login" onclick="doLogin()">Log In</button>
+
+            <!--Register hyperlink-->
+            <a class="btn btn-sm bg-success text-white rounded" href="register.html">Create an Account</a>
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+
+</html>
