@@ -17,7 +17,7 @@ const x = document.getElementById("demo");
 
       function showPosition(position) 
       {
-        x.innerHTML =
+          x.innerHTML =
           "Latitude: " +
           position.coords.latitude +
           "<br>Longitude: " +
