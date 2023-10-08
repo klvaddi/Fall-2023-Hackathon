@@ -1,28 +1,30 @@
 function doLogin() {
-  let login = document.getElementById("loginName").value;
-  let password = document.getElementById("loginPassword").value;
+    // let urlBase = "";
+    let login = document.getElementById("loginName").value;
+    let password = document.getElementById("loginPassword").value;
 
-  document.getElementById("loginNotice").innerHTML = "";
+    document.getElementById("loginNotice").innerHTML = "";
 
-  let tmp = { login: login, password: password };
-  let jsonPayload = JSON.stringify(tmp);
+    let tmp = { user_name: login, password: password };
+    let jsonPayload = JSON.stringify(tmp);
 
-  let url = urlBase + "/Login.php";
+    // let url = urlBase + "/Login.php";
+    let url = "/FallKnightHack/api/login.php";
 
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 
-  try {
+    try {
     xhr.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && this.status == 200) {
         let jsonObject = JSON.parse(xhr.responseText);
         userId = jsonObject.id;
 
         if (userId < 1) {
-          document.getElementById("loginNotice").innerHTML =
+            document.getElementById("loginNotice").innerHTML =
             "* User/Password combination incorrect";
-          return;
+            return;
         }
 
         firstName = jsonObject.firstName;
@@ -32,13 +34,13 @@ function doLogin() {
 
         saveCookie();
 
-        window.location.href = "html/home.html";
-      }
+        window.location.href = "/FallKnightHack/html/home.html";
+        }
     };
     xhr.send(jsonPayload);
-  } catch (err) {
+    } catch (err) {
     document.getElementById("loginNotice").innerHTML = "* " + err.message;
-  }
+    }
 }
 
 function saveCookie() {

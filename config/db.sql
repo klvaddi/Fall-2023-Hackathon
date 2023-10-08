@@ -21,9 +21,10 @@ CREATE TABLE current_location (
 
 CREATE TABLE normal_user (
     n_user_id INTEGER AUTO_INCREMENT,
-    blood_type VARCHAR(30)  NOT NULL,
-    height INTEGER NOT NULL,
-    weigt INTEGER NOT NULL,
+    blood_type VARCHAR(30),
+    height INTEGER,
+    weigt INTEGER,
+    gender VARCHAR(30), 
     user_id INTEGER NOT NULL,
     PRIMARY KEY(n_user_id),
     FOREIGN KEY(user_id) REFERENCES user(user_id)
