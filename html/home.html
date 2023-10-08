@@ -18,7 +18,7 @@
         class="container-fluid d-flex align-items-center justify-content-between"
       >
         <div></div>
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="./home.html">
           <div class="custom-font text-primary">
             <p class="fs-1 fw-semibold">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emergency
@@ -37,6 +37,7 @@
         </a>
         <div class="dropdown">
           <button
+            id="userName"
             class="btn btn-success dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
@@ -45,8 +46,14 @@
             Insert Username
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+            <li>
+              <a class="dropdown-item clickable" href="./settings.html"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <p id="logoutButton" class="dropdown-item clickable">Sign Out</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,5 +76,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="/javascripts/map.js"></script>
+
+    <script type="text/javascript" src="/javascripts/logout.js"></script>
   </body>
 </html>
