@@ -1,6 +1,7 @@
 const x = document.getElementById("demo");
 
 function getLocation() {
+  latitude 
   const confirmation = confirm("Allow this website to access your location?");
   if (confirmation) {
     if (navigator.geolocation) {
@@ -14,9 +15,12 @@ function getLocation() {
 }
 
 function showPosition(position) {
+  
+  /*
   x.innerHTML =
     "Latitude: " +
     position.coords.latitude +
     "<br>Longitude: " +
     position.coords.longitude;
+  *
 }
