@@ -21,6 +21,9 @@ CREATE TABLE current_location (
 
 CREATE TABLE normal_user (
     n_user_id INTEGER AUTO_INCREMENT,
+    blood_type VARCHAR(30)  NOT NULL,
+    height INTEGER NOT NULL,
+    weigt INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
     PRIMARY KEY(n_user_id),
     FOREIGN KEY(user_id) REFERENCES user(user_id)
@@ -44,4 +47,13 @@ CREATE TABLE requests (
     FOREIGN KEY(n_user_id) REFERENCES normal_user(n_user_id),
     FOREIGN KEY(a_user_id) REFERENCES ambulance_user(a_user_id),
     FOREIGN KEY(location_id) REFERENCES current_location(location_id)
+);
+
+CREATE TABLE pre_existing_conditions (
+    condition_id INTEGER AUTO_INCREMENT,
+    condition_name VARCHAR(225) NOT NULL,
+    condition_description VARCHAR(225),
+    n_user_id INTEGER NOT NULL,
+    PRIMARY KEY(condition_id),
+    FOREIGN KEY(n_user_id) REFERENCES normal_user(n_user_id)
 );
