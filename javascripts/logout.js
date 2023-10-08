@@ -2,7 +2,6 @@ const logoutElement = document.getElementById("logoutButton");
 logoutElement.addEventListener("click", doLogout);
 
 function doLogout() {
-  console.log("bruh");
   clearClientSession();
 
   window.location.href = "/html/index.html";
