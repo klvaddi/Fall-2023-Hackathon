@@ -5,3 +5,19 @@
 .custom-font {
   font-family: "Times", sans-serif;
 }
+
+.centered-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.red-button {
+  background-color: red;
+  color: white;
+  font-size: 24px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -10,26 +10,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./resources/css/index.css" />
+    <link rel="stylesheet" href="../resources/css/index.css" />
     <script type="text/javascript" src="/javascripts/map.js"></script>
-
-    <style>
-      .centered-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .red-button {
-        background-color: red;
-        color: white;
-        font-size: 24px;
-        padding: 20px 40px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body style="background-color: #56bcd0">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -71,37 +53,11 @@
       </div>
     </nav>
     <div class="centered-button">
-      <button onclick="getLocation()" class="red-button">SOS</button>
+      <button class="red-button" onclick="getLocation()">SOS</button>
     </div>
 
     <p id="demo"></p>
 
-    <script>
-      const x = document.getElementById("demo");
-
-      function getLocation() {
-        const confirmation = confirm(
-          "Allow this website to access your location?"
-        );
-        if (confirmation) {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        } else {
-          x.innerHTML = "Geolocation access denied.";
-        }
-      }
-
-      function showPosition(position) {
-        x.innerHTML =
-          "Latitude: " +
-          position.coords.latitude +
-          "<br>Longitude: " +
-          position.coords.longitude;
-      }
-    </script>
     <p id="status"></p>
     <a id="map-link" target="_blank"></a>
 
@@ -110,5 +66,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="../javascripts/map.js"></script>
   </body>
 </html>
