@@ -7,4 +7,4 @@ Goal: The users for this application are civilians and paramedics. A civilian cr
 My (Lokesh Vaddi) Contributions:
 - Improved practicality with addition of medical data
 - HTML for Navigation Bar and Settings Page to enter medical data
-- JavaScript for button functionality
+- Helped with functionality of other front-end components
